@@ -13,4 +13,8 @@
     <ProjectReference Include="..\copilot-demo.Web\copilot-demo.Web.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.SqlServer" Version="13.2.0" />
+  </ItemGroup>
+
 </Project>
