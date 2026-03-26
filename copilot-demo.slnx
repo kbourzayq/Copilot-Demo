@@ -2,5 +2,4 @@
   <Project Path="copilot-demo.ApiService/copilot-demo.ApiService.csproj" />
   <Project Path="copilot-demo.AppHost/copilot-demo.AppHost.csproj" />
   <Project Path="copilot-demo.ServiceDefaults/copilot-demo.ServiceDefaults.csproj" />
-  <Project Path="copilot-demo.Web/copilot-demo.Web.csproj" />
 </Solution>

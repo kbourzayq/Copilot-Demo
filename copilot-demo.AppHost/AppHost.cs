@@ -8,10 +8,11 @@ var apiService = builder.AddProject<Projects.copilot_demo_ApiService>("apiservic
     .WaitFor(sqldb)
     .WithReference(sqldb);
 
-builder.AddProject<Projects.copilot_demo_Web>("webfrontend")
+builder.AddJavaScriptApp("webfrontend", "../copilot-demo.Web.React")
+    .WithHttpEndpoint(env: "PORT")
     .WithExternalHttpEndpoints()
-    .WithHttpHealthCheck("/health")
     .WithReference(apiService)
-    .WaitFor(apiService);
+    .WaitFor(apiService)
+    .WithEnvironment("BROWSER", "none");
 
 builder.Build().Run();

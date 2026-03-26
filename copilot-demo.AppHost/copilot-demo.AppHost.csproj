@@ -10,10 +10,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\copilot-demo.ApiService\copilot-demo.ApiService.csproj" />
-    <ProjectReference Include="..\copilot-demo.Web\copilot-demo.Web.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.JavaScript" Version="13.2.0" />
     <PackageReference Include="Aspire.Hosting.SqlServer" Version="13.2.0" />
   </ItemGroup>
 
