@@ -3,11 +3,8 @@ dotnet = "10"
 node = "22"
 "github:microsoft/aspire" = "latest"
 
-[env]
-_.path = ["copilot-demo.Web.React/node_modules/.bin"]
-
-[tasks.restore]
-description = "Restore .NET and npm dependencies"
+[tasks.setup]
+description = "Install all dependencies (.NET + npm)"
 run = [
   "dotnet restore",
   "npm install --prefix copilot-demo.Web.React",
