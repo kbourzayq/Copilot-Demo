@@ -1,0 +1,18 @@
+[tools]
+dotnet = "10"
+node = "22"
+"github:microsoft/aspire" = "latest"
+
+[env]
+_.path = ["copilot-demo.Web.React/node_modules/.bin"]
+
+[tasks.restore]
+description = "Restore .NET and npm dependencies"
+run = [
+  "dotnet restore",
+  "npm install --prefix copilot-demo.Web.React",
+]
+
+[tasks.dev]
+description = "Run the full Aspire app (API + React + SQL Server) via the Aspire CLI"
+run = "aspire run"
